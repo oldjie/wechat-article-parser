@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📰 wechat-article-parser
+# 📰 微信公众号文章解析 skill (wechat-article-parser)
 
 ### *"让 AI 帮你快速读完一篇公众号文章，不漏重点。"*
 
@@ -24,6 +24,15 @@
 
 ## 📦 安装
 
+把下面这行发给你的 Agent：
+
+> 帮我安装 wechat-article-parser skill：https://github.com/oldjie/wechat-article-parser
+
+你的 Agent 会自动克隆仓库并安装依赖。
+
+<details>
+<summary><b>👇 手动安装（不想用 AI 装？）</b></summary>
+
 ```bash
 # 克隆仓库
 git clone https://github.com/oldjie/wechat-article-parser.git ~/.claude/skills/wechat-article-parser
@@ -35,9 +44,6 @@ npm install playwright cheerio
 # 安装浏览器（仅需一次）
 npx playwright install chromium
 ```
-
-<details>
-<summary><b>🐹 其他 Agent 平台</b></summary>
 
 | 平台 | 安装路径 |
 |------|---------|

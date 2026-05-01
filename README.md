@@ -1,43 +1,121 @@
-# 微信公众号文章解析器
+<div align="center">
 
-解析微信公众号文章，提取核心要点和干货。让 AI 帮你快速读完一篇公众号文章，不漏重点。
+# 📰 wechat-article-parser
 
-## 功能
+### *"让 AI 帮你快速读完一篇公众号文章，不漏重点。"*
 
-- 解析微信公众号文章链接
-- 提取标题、作者、发布时间
-- 提取正文内容
-- 智能总结核心要点
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-22%2B-green.svg)](https://nodejs.org)
+[![Playwright](https://img.shields.io/badge/Playwright-latest-blue.svg)](https://playwright.dev)
 
-## 安装
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-teal)](https://github.com/openclaw/clawhub)
+[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+
+<br>
+
+解析微信公众号文章，提取核心要点和干货。支持多种文章类型的智能总结。
+
+[📦 安装](#-安装) · [🚀 使用](#-使用) · [🔧 依赖](#-依赖)
+
+</div>
+
+---
+
+## 📦 安装
 
 ```bash
+# 克隆仓库
+git clone https://github.com/oldjie/wechat-article-parser.git ~/.claude/skills/wechat-article-parser
+
 # 安装依赖
+cd ~/.claude/skills/wechat-article-parser
 npm install playwright cheerio
 
 # 安装浏览器（仅需一次）
 npx playwright install chromium
 ```
 
-## 使用方法
+<details>
+<summary><b>🐹 其他 Agent 平台</b></summary>
+
+| 平台 | 安装路径 |
+|------|---------|
+| OpenClaw | `~/.openclaw/workspace/skills/wechat-article-parser` |
+| Claude Code | `~/.claude/skills/wechat-article-parser` |
+| Codex | `~/.codex/skills/wechat-article-parser` |
+
+</details>
+
+---
+
+## 🚀 使用
+
+在支持 Skill 的 Agent 中，直接发送微信公众号文章链接即可自动触发：
+
+```
+发送：https://mp.weixin.qq.com/s/xxxxx
+```
+
+或手动执行：
 
 ```bash
 node scripts/fetch-wechat.js <公众号文章链接>
 ```
 
-## 示例
-
+**示例：**
 ```bash
-node scripts/fetch-wechat.js https://mp.weixin.qq.com/s/xxxxx
+node scripts/fetch-wechat.js https://mp.weixin.qq.com/s/0d8x55t1t-SWQzG7jck7Pw
 ```
 
-## 适用场景
+---
 
-- 快速了解公众号文章核心内容
-- 批量处理多个公众号文章
-- 信息收集与整理
+## 📤 输出说明
 
-## 相关话题
+Skill 会根据文章类型智能调整输出方式：
+
+| 文章类型 | 输出策略 |
+|---------|---------|
+| 干货/资讯类 | 简洁聚焦，提取核心要点 |
+| 变化/事件类 | 理清背景→变化→原因→影响→争议 |
+| 发布会/产品类 | 每个产品的背景、解决的问题、逻辑关系 |
+| 科普/历史/故事类 | 保留关键人物、数据、年份、具体案例 |
+| 推介/评测类 | 保留趣味，不过度精简 |
+
+---
+
+## 🔧 依赖
+
+| 依赖 | 说明 |
+|-----|------|
+| Node.js 22+ | 运行环境 |
+| playwright | 浏览器自动化抓取 |
+| cheerio | HTML 解析 |
+
+---
+
+## 📂 项目结构
+
+```
+wechat-article-parser/
+├── SKILL.md              # Skill 入口（frontmatter 配置）
+├── README.md             # 本文件
+├── LICENSE              # MIT 协议
+└── scripts/
+    └── fetch-wechat.js   # 公众号文章抓取脚本
+```
+
+---
+
+## ⭐ 相关话题
 
 - `ai-skill`
 - `agent-skill`
+
+---
+
+<div align="center">
+
+**MIT License** © [oldjie](https://github.com/oldjie)
+
+</div>

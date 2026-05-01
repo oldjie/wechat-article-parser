@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📰 微信公众号文章解析 skill (wechat-article-parser)
+# 📰 微信公众号文章爬取解析 skill (wechat-article-parser)
 
 ### *"让 AI 帮你快速读完一篇公众号文章，不漏重点。"*
 
